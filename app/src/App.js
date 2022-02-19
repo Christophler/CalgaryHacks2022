@@ -14,6 +14,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TextInput,
   useColorScheme,
   View,
 } from 'react-native';
@@ -53,6 +54,9 @@ const Section = ({children, title}): Node => {
 };
 
 const App: () => Node = () => {
+  const [text, onChangeText] = React.useState("Useless Text");
+  const [number, onChangeNumber] = React.useState(null);
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -74,6 +78,26 @@ const App: () => Node = () => {
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
           </Section>
+
+          <Section title="Beans">Beans and toast.</Section>
+
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeText}
+            value={text}
+            placeholder="useless placeholder"
+            keyboardType="numeric"
+          />
+          <TextInput
+            style={styles.input}
+            onChangeText={onChangeNumber}
+            value={number}
+            placeholder="useless placeholder"
+            keyboardType="numeric"
+          />
+
+          <Section title="Beans">{text}{"\n"}{number}</Section>
+
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
@@ -106,6 +130,12 @@ const styles = StyleSheet.create({
   },
   highlight: {
     fontWeight: '700',
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
   },
 });
 
