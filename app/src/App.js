@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {View, Text, Dimensions, SafeAreaView} from 'react-native';
+import {View, Text, Dimensions, TextInput, SafeAreaView} from 'react-native';
 import NavigationBar from './components/NavigationBar';
 import generalStyles from './generalStyles';
 
@@ -15,15 +15,24 @@ const win = Dimensions.get('window');
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <View style={{height: win.height}}>
-        <Text style={generalStyles.input}>"Hi"</Text>
-        <Text style={generalStyles.input}>"Hi"</Text>
-        <View style={{position: 'absolute', bottom: 28, width: '100%'}}>
-          <NavigationBar />
-        </View>
-      </View>
-    </SafeAreaView>
+    <View>
+      <Text style={generalStyles.baseText}>From:</Text>
+
+      <TextInput
+        style={generalStyles.input}
+        placeholder={'Enter the starting location'}
+      />
+
+      <Text style={generalStyles.baseText}>
+        <Text style={generalStyles.titleText}>
+          {'Title'}
+          {'\n'}
+          {'\n'}
+        </Text>
+        <Text numberOfLines={5}>{'Hi'}</Text>
+      </Text>
+      <NavigationBar></NavigationBar>
+    </View>
   );
 };
 

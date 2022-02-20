@@ -7,6 +7,13 @@ const generalStyles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
+  baseText: {
+    fontFamily: 'Cochin',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });
 
 export default generalStyles;
