@@ -20,3 +20,4 @@ strokeWidth={4}
 ```
 
 2. `npm i react-native-maps react-native-webview react-native-maps-directions`
+3. `npx react-native link react-native-maps`
