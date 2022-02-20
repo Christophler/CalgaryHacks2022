@@ -1,12 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
 
 import React from 'react';
+<<<<<<< Updated upstream
 import {
   View,
   Text,
@@ -17,12 +11,17 @@ import {
 } from 'react-native';
 import NavigationBar from './components/NavigationBar';
 import generalStyles from './generalStyles';
+=======
+import { SafeAreaView, View, } from 'react-native';
+import GoogleMap from './components/GoogleMap';
+
+>>>>>>> Stashed changes
 
 const win = Dimensions.get('window');
 
 const App = () => {
   return (
-    <View style={{height: win.height - 27}}>
+    <View style={{ height: win.height - 27 }}>
       <Text style={generalStyles.baseText}>From:</Text>
       <TextInput
         style={generalStyles.input}
@@ -50,7 +49,7 @@ const App = () => {
         </Text>
         <Text numberOfLines={5}>{'Hi'}</Text>
       </Text>
-      <View style={{position: 'absolute', bottom: 0, width: '100%'}}>
+      <View style={{ position: 'absolute', bottom: 0, width: '100%' }}>
         <NavigationBar></NavigationBar>
       </View>
     </View>
