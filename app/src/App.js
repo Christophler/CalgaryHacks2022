@@ -15,7 +15,7 @@ const win = Dimensions.get('window');
 
 const App = () => {
   return (
-    <View>
+    <View style={{height: win.height - 27}}>
       <Text style={generalStyles.baseText}>From:</Text>
 
       <TextInput
@@ -31,7 +31,9 @@ const App = () => {
         </Text>
         <Text numberOfLines={5}>{'Hi'}</Text>
       </Text>
-      <NavigationBar></NavigationBar>
+      <View style={{position: 'absolute', bottom: 0, width: '100%'}}>
+        <NavigationBar></NavigationBar>
+      </View>
     </View>
   );
 };

@@ -1,5 +1,8 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import {Dimensions, StyleSheet, Image, Text, View} from 'react-native';
 import React from 'react';
+import contact from '../assets/contact.png';
+import traveller from '../assets/traveller.png';
+import settings from '../assets/settingsNav.png';
 
 const win = Dimensions.get('window');
 
@@ -8,13 +11,14 @@ const NavigationBar = () => {
     <>
       <View
         style={{
+          padding: 10,
           flexDirection: 'row',
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
           backgroundColor: '#DCEDC8',
         }}>
-        <Text>asdf</Text>
-        <Text>asfda</Text>
-        <Text>asfda</Text>
+        <Image source={contact} />
+        <Image source={traveller} />
+        <Image source={settings} />
       </View>
     </>
   );
