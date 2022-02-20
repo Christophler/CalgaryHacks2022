@@ -14,6 +14,16 @@ const generalStyles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
+  lineImage: {
+    paddingLeft: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  content: {
+    flex: 0.05,
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
 });
 
 export default generalStyles;

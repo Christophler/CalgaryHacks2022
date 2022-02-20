@@ -7,7 +7,14 @@
  */
 
 import React from 'react';
-import {View, Text, Dimensions, TextInput, SafeAreaView} from 'react-native';
+import {
+  View,
+  Text,
+  Dimensions,
+  Image,
+  TextInput,
+  SafeAreaView,
+} from 'react-native';
 import NavigationBar from './components/NavigationBar';
 import generalStyles from './generalStyles';
 
@@ -17,11 +24,23 @@ const App = () => {
   return (
     <View style={{height: win.height - 27}}>
       <Text style={generalStyles.baseText}>From:</Text>
-
       <TextInput
         style={generalStyles.input}
         placeholder={'Enter the starting location'}
       />
+
+      <Text style={generalStyles.baseText}>To:</Text>
+      <TextInput
+        style={generalStyles.input}
+        placeholder={'Enter the destination'}
+      />
+
+      <View style={generalStyles.content}>
+        <Image
+          style={generalStyles.lineImage}
+          source={require('./assets/Line1.png')}
+        />
+      </View>
 
       <Text style={generalStyles.baseText}>
         <Text style={generalStyles.titleText}>
