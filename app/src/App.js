@@ -1,6 +1,5 @@
 
 import React from 'react';
-<<<<<<< Updated upstream
 import {
   View,
   Text,
@@ -11,11 +10,8 @@ import {
 } from 'react-native';
 import NavigationBar from './components/NavigationBar';
 import generalStyles from './generalStyles';
-=======
-import { SafeAreaView, View, } from 'react-native';
 import GoogleMap from './components/GoogleMap';
 
->>>>>>> Stashed changes
 
 const win = Dimensions.get('window');
 
