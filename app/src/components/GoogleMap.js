@@ -7,12 +7,12 @@ const GoogleMap = () => {
 
     const [coordinates] = useState([
         {
-            latitude: 43.816722288815136,
-            longitude: -79.27897951153537,
+            latitude: 43.81580943698291,
+            longitude: -79.28190908312187,
         },
         {
-            latitude: 43.818032519873086,
-            longitude: -79.27861204902106,
+            latitude: 43.83110487464262,
+            longitude: -79.27538595112817,
         },
     ]);
 
@@ -23,8 +23,8 @@ const GoogleMap = () => {
                 initialRegion={{
                     latitude: coordinates[0].latitude,
                     longitude: coordinates[0].longitude,
-                    latitudeDelta: 0.005,
-                    longitudeDelta: 0.005,
+                    latitudeDelta: 0.1,
+                    longitudeDelta: 0.1,
                 }}>
                 <Marker coordinate={coordinates[0]} />
                 <Marker coordinate={coordinates[1]} />

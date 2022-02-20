@@ -12,7 +12,6 @@ import NavigationBar from './components/NavigationBar';
 import generalStyles from './generalStyles';
 import GoogleMap from './components/GoogleMap';
 
-
 const win = Dimensions.get('window');
 
 const App = () => {
@@ -45,6 +44,7 @@ const App = () => {
         </Text>
         <Text numberOfLines={5}>{'Hi'}</Text>
       </Text>
+      <GoogleMap />
       <View style={{ position: 'absolute', bottom: 0, width: '100%' }}>
         <NavigationBar></NavigationBar>
       </View>
