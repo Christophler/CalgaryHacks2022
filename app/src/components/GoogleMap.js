@@ -4,33 +4,42 @@ import MapView, { Marker } from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions'
 
 const GoogleMap = () => {
-
-    const [coordinates] = useState([
-        {
-            latitude: 43.81580943698291,
-            longitude: -79.28190908312187,
-        },
-        {
-            latitude: 43.83110487464262,
-            longitude: -79.27538595112817,
-        },
-    ]);
+    const [current, setCurrent] = useState('from');
+    const [from, setFrom] = useState({
+        latitude: 43.81580943698291,
+        longitude: -79.28190908312187,
+    });
+    const [to, setTo] = useState({
+        latitude: 43.83110487464262,
+        longitude: -79.27538595112817,
+    });
 
     return (
         <View style={{ flex: 1, }}>
             <MapView
                 style={{ flex: 1, }}
+                onPress={(e) => {
+                    var latitude = e.nativeEvent.coordinate.latitude;
+                    var longitude = e.nativeEvent.coordinate.longitude;
+                    if (current == 'from') {
+                        setCurrent('to');
+                        setFrom({ latitude, longitude });
+                    } else {
+                        setCurrent('from');
+                        setTo({ latitude, longitude });
+                    }
+                }}
                 initialRegion={{
-                    latitude: coordinates[0].latitude,
-                    longitude: coordinates[0].longitude,
+                    latitude: to.latitude,
+                    longitude: to.longitude,
                     latitudeDelta: 0.1,
                     longitudeDelta: 0.1,
                 }}>
-                <Marker coordinate={coordinates[0]} />
-                <Marker coordinate={coordinates[1]} />
+                <Marker coordinate={from} />
+                <Marker coordinate={to} />
                 <MapViewDirections
-                    origin={coordinates[0]}
-                    destination={coordinates[1]}
+                    origin={from}
+                    destination={to}
                     apikey={'<API_KEY>'} // insert your API Key here
                     strokeWidth={4}
                     strokeColor="#111111"

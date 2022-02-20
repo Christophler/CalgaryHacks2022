@@ -6,7 +6,6 @@ import {
   Dimensions,
   Image,
   TextInput,
-  SafeAreaView,
 } from 'react-native';
 import NavigationBar from './components/NavigationBar';
 import generalStyles from './generalStyles';
@@ -16,7 +15,7 @@ const win = Dimensions.get('window');
 
 const App = () => {
   return (
-    <View style={{ height: win.height - 27 }}>
+    <View style={{ height: win.height - 27, flexDirection: 'column', justifyContent: 'center', }}>
       <Text style={generalStyles.baseText}>From:</Text>
       <TextInput
         style={generalStyles.input}
@@ -40,11 +39,11 @@ const App = () => {
         <Text style={generalStyles.titleText}>
           {'Title'}
           {'\n'}
-          {'\n'}
         </Text>
-        <Text numberOfLines={5}>{'Hi'}</Text>
       </Text>
-      <GoogleMap />
+      <View style={{ height: 400, width: 400, }}>
+        <GoogleMap />
+      </View>
       <View style={{ position: 'absolute', bottom: 0, width: '100%' }}>
         <NavigationBar></NavigationBar>
       </View>
