@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const generalStyles = StyleSheet.create({
   input: {
@@ -11,7 +11,7 @@ const generalStyles = StyleSheet.create({
     fontFamily: 'Cochin',
   },
   titleText: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
   },
   lineImage: {

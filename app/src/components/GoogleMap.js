@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions'
 
-const GoogleMap = () => {
+const GoogleMap = ({ setDistanceFn }) => {
     const [current, setCurrent] = useState('from');
     const [from, setFrom] = useState({
         latitude: 43.81580943698291,
@@ -43,6 +43,11 @@ const GoogleMap = () => {
                     apikey={'<API_KEY>'} // insert your API Key here
                     strokeWidth={4}
                     strokeColor="#111111"
+                    onReady={(obj) => {
+                        console.log(obj.distance + 'km  ' + obj.duration + 'minutes');
+                        setDistanceFn(obj.distance);
+                    }}
+                    precision={'low'}
                 />
             </MapView>
         </View>
