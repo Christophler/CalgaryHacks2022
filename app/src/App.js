@@ -6,6 +6,7 @@ import {
   Dimensions,
   Image,
   TextInput,
+  Button,
 } from 'react-native';
 import NavigationBar from './components/NavigationBar';
 import generalStyles from './generalStyles';
@@ -15,7 +16,7 @@ const win = Dimensions.get('window');
 
 const App = () => {
   return (
-    <View style={{ height: win.height - 27, flexDirection: 'column', justifyContent: 'center', }}>
+    <View style={{ height: win.height - 27 }}>
       <Text style={generalStyles.baseText}>From:</Text>
       <TextInput
         style={generalStyles.input}
@@ -37,13 +38,16 @@ const App = () => {
 
       <Text style={generalStyles.baseText}>
         <Text style={generalStyles.titleText}>
-          {'Title'}
+          {'Select From and To'}
           {'\n'}
         </Text>
       </Text>
       <View style={{ height: 400, width: 400, }}>
         <GoogleMap />
       </View>
+      <Button title={'GO'} onPress={() => {
+        console.log('Go!');
+      }} />
       <View style={{ position: 'absolute', bottom: 0, width: '100%' }}>
         <NavigationBar></NavigationBar>
       </View>
