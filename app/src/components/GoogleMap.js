@@ -40,7 +40,7 @@ const GoogleMap = ({ setDistanceFn }) => {
                 <MapViewDirections
                     origin={from}
                     destination={to}
-                    apikey={'<API_KEY>'} // insert your API Key here
+                    apikey={'AIzaSyDv59cbo2A3hZldY0S0usHzqEr8N1ZdjKc'} // insert your API Key here
                     strokeWidth={4}
                     strokeColor="#111111"
                     onReady={(obj) => {

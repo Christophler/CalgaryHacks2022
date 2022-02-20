@@ -1,4 +1,4 @@
-import {Dimensions, StyleSheet, Image, Text, View} from 'react-native';
+import { Dimensions, StyleSheet, Image, Text, View } from 'react-native';
 import React from 'react';
 import contact from '../assets/contact.png';
 import traveller from '../assets/traveller.png';
