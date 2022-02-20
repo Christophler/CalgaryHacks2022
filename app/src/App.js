@@ -7,12 +7,13 @@
  */
 
 import React from 'react';
-import { View, Text } from 'react-native';
+import {View, Text} from 'react-native';
+import generalStyles from './generalStyles';
 
 const App = () => {
   return (
     <View>
-      <Text>Hello</Text>
+      <Text style={generalStyles.input}>"Hi"</Text>
     </View>
   );
 };
