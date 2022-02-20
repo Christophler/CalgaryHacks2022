@@ -1,3 +1,5 @@
+import {StyleSheet} from 'react-native';
+
 const generalStyles = StyleSheet.create({
   input: {
     height: 40,
@@ -6,5 +8,5 @@ const generalStyles = StyleSheet.create({
     padding: 10,
   },
 });
-  
+
 export default generalStyles;
