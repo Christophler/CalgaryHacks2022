@@ -19,7 +19,4 @@ strokeWidth={4}
 <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 ```
 
-2. `npm i react-native-maps`
-3. `npm i -g yarn` \*if not already globally installed
-4. `yarn add react-native-webview`
-5. `npm i react-native-maps-directions`
+2. `npm i react-native-maps react-native-webview react-native-maps-directions`
